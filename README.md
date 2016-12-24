@@ -1,4 +1,6 @@
-# README
+# RIME
+[![Build Status](https://travis-ci.org/cow-co/RIME.svg?branch=master)](https://travis-ci.org/cow-co/RIME)
+[![Coverage Status](https://coveralls.io/repos/github/cow-co/RIME/badge.svg?branch=master)](https://coveralls.io/github/cow-co/RIME?branch=master)
 
 ## The Project
 
