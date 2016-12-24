@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## The Project
 
-Things you may want to cover:
+This is a little project I'm working on in my spare time, firstly to learn Ruby and Rails, and secondly because it's fun.  The idea is to make a chat application based on RINE from the visual novel Steins;Gate 0.
 
-* Ruby version
+## Progress and Plans
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+See the [Issues](https://github.com/cow-co/RIME/issues) for a "TODO list" of things I want to implement.
