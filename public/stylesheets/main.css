@@ -1,0 +1,32 @@
+/**
+ * The main CSS file, for governing most, if not all, of the app.
+ */
+#WelcomeDiv {
+    height: 60vh;
+    background-color: #66ccff;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.navbar {
+    border-width: 0 !important;
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    background-color: #66ccff !important;
+}
+
+.nav.navbar-nav.navbar-right > li > a {
+    color: white !important;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.5em !important;
+}
+
+.jumbotron {
+    margin-top: 0 !important;
+}

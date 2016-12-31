@@ -1,0 +1,6 @@
+#Travis CI config file
+
+notifications:
+    email:
+        on_success: change
+        on_failure: change
