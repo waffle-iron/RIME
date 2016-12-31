@@ -39,14 +39,6 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
-    aws-sdk (2.6.42)
-      aws-sdk-resources (= 2.6.42)
-    aws-sdk-core (2.6.42)
-      aws-sigv4 (~> 1.0)
-      jmespath (~> 1.0)
-    aws-sdk-resources (2.6.42)
-      aws-sdk-core (= 2.6.42)
-    aws-sigv4 (1.0.0)
     builder (3.2.2)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -168,7 +160,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk
   byebug
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
