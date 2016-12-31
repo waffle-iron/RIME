@@ -7,6 +7,25 @@
     color: white;
 }
 
+#SULI {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+#SULI > a {
+    padding: 15px;
+    background-color: #33cc33;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#SULI > a:hover {
+    text-decoration: none;
+    color: black;
+    background-color: #29a329;
+}
+
 h1 {
     text-align: center;
 }
@@ -25,6 +44,10 @@ h1 {
 .navbar-brand {
     color: white !important;
     font-size: 1.5em !important;
+}
+
+.nav.navbar-nav.navbar-right > li > a:hover {
+    color: black !important;
 }
 
 .jumbotron {
