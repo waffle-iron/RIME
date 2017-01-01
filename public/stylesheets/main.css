@@ -3,7 +3,7 @@
  */
 #WelcomeDiv {
     height: 60vh;
-    background-color: #66ccff;
+    background-color: #0099ff;
     color: white;
 }
 
@@ -14,7 +14,7 @@
 
 #SULI > a {
     padding: 15px;
-    background-color: #33cc33;
+    background-color: #0066cc;
     color: white;
     border-radius: 5px;
     margin: 10px;
@@ -23,7 +23,7 @@
 #SULI > a:hover {
     text-decoration: none;
     color: black;
-    background-color: #29a329;
+    background-color: #004d99;
 }
 
 h1 {
