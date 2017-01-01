@@ -1,9 +1,10 @@
 /**
  * The main CSS file, for governing most, if not all, of the app.
  */
+
 #WelcomeDiv {
     height: 60vh;
-    background-color: #66ccff;
+    background-color: #0099ff;
     color: white;
 }
 
@@ -14,27 +15,33 @@
 
 #SULI > a {
     padding: 15px;
-    background-color: #33cc33;
+    background-color: #0066cc;
     color: white;
     border-radius: 5px;
     margin: 10px;
+    margin-top: 60px !important;
 }
 
 #SULI > a:hover {
     text-decoration: none;
     color: black;
-    background-color: #29a329;
+    background-color: #004d99;
 }
 
 h1 {
     text-align: center;
 }
 
+h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .navbar {
     border-width: 0 !important;
     margin-bottom: 0 !important;
     border-radius: 0 !important;
-    background-color: #66ccff !important;
+    background-color: #0066cc !important;
 }
 
 .nav.navbar-nav.navbar-right > li > a {
@@ -46,10 +53,26 @@ h1 {
     font-size: 1.5em !important;
 }
 
+.navbar-brand:hover {
+    color: black !important;
+}
+
 .nav.navbar-nav.navbar-right > li > a:hover {
     color: black !important;
 }
 
 .jumbotron {
     margin-top: 0 !important;
+}
+
+ul {
+    list-style: none;
+}
+
+#Plan ul li {
+    padding: 9px;
+}
+
+#Plan {
+    padding-top: 30px;
 }
