@@ -1,5 +1,6 @@
 require 'test_helper'
 
+#Unit tests for the User model
 class UserTest < ActiveSupport::TestCase
 
     def setup
@@ -47,5 +48,12 @@ class UserTest < ActiveSupport::TestCase
         @userLength.name = "Joe_Blogs"
         @userLength.email = tooLongForEmail
         assert_not @userLength.valid?
+    end
+
+    test "email and username uniqueness test" do
+        duplicateUser = @userValid.dup
+        duplicateUser.email = @user.email.upcase    #test case-sensitivity (uppercase version should be treated as the same as lowercase)
+        @userValid.save
+        assert_not duplicateUser.valid?
     end
 end
