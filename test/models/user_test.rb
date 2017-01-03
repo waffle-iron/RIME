@@ -9,6 +9,7 @@ class UserTest < ActiveSupport::TestCase
         @userEmptyName = User.new(name: "", email: "empty.email@gmail.com")
         @userRegex = User.new(name: "Ex", email: "")
         @userLength = User.new(name: "", email: "")
+        @userPasswordTest = User.new(name: "Joe Bloggy", email: "joe.blogs@joeblogs.com")
     end
 
     test "presence test should be present" do
@@ -55,5 +56,15 @@ class UserTest < ActiveSupport::TestCase
         duplicateUser.email = @user.email.upcase    #test case-sensitivity (uppercase version should be treated as the same as lowercase)
         @userValid.save
         assert_not duplicateUser.valid?
+    end
+
+    test "password empty test" do
+        @userPasswordTest.password = @userPasswordTest.password_confirmation = " " * 6;
+        assert_not @userPasswordTest.valid?
+    end
+
+    test "password length test" do
+        @userPasswordTest.password = @userPasswordTest.password_confirmation = "a" * 5;
+        assert_not @userPasswordTest.valid?
     end
 end
