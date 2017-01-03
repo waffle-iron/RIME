@@ -4,12 +4,23 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
 
     def setup
-        @userValid = User.new(name: "Example User", email: "user@example.com")
-        @userEmptyEmail = User.new(name: "Empty Email", email: "  ")
-        @userEmptyName = User.new(name: "", email: "empty.email@gmail.com")
-        @userRegex = User.new(name: "Ex", email: "")
-        @userLength = User.new(name: "", email: "")
-        @userPasswordTest = User.new(name: "Joe Bloggy", email: "joe.blogs@joeblogs.com")
+        @userValid = User.new(name: "Example User", email: "user@example.com",
+                    password: "foobarbaz", password_confirmation: "foobarbaz")
+
+        @userEmptyEmail = User.new(name: "Empty Email", email: "  ",
+                    password: "foobarbaz", password_confirmation: "foobarbaz")
+                    
+        @userEmptyName = User.new(name: "", email: "empty.email@gmail.com",
+                    password: "foobarbaz", password_confirmation: "foobarbaz")
+
+        @userRegex = User.new(name: "Ex", email: "",
+                    password: "foobarbaz", password_confirmation: "foobarbaz")
+
+        @userLength = User.new(name: "", email: "",
+                    password: "foobarbaz", password_confirmation: "foobarbaz")
+
+        @userPasswordTest = User.new(name: "Joe Bloggy", email: "joe.blogs@joeblogs.com",
+                    password: "foobarbaz", password_confirmation: "foobarbaz")
     end
 
     test "presence test should be present" do
