@@ -2,8 +2,8 @@
  * The main CSS file, for governing most, if not all, of the app.
  */
 
-#WelcomeDiv {
-    height: 60vh;
+#BannerDiv {
+    height: 40vh;
     background-color: #0099ff;
     color: white;
 }
