@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 #For codecov
 require 'coveralls'
 Converalls.wear!('rails')
+=======
+require 'coveralls'
+Coveralls.wear!('rails')
+>>>>>>> 34edcabfd2310549c0f0f0686a7d85815e24142e
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
