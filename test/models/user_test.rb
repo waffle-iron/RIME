@@ -52,10 +52,10 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "email and username uniqueness test" do
-        duplicateUser = @userValid.dup
-        duplicateUser.email = @user.email.upcase    #test case-sensitivity (uppercase version should be treated as the same as lowercase)
+        duplicate_user = @userValid.dup
+        duplicate_user.email = @userValid.email.upcase    #test case-sensitivity (uppercase version should be treated as the same as lowercase)
         @userValid.save
-        assert_not duplicateUser.valid?
+        assert_not duplicate_user.valid?
     end
 
     test "password empty test" do
