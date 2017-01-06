@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <%= render 'layouts/navbar' %> 
+        <%= render 'layouts/navbar' %>
 
         <div id = "BannerDiv" class = "jumbotron">
 
@@ -18,8 +18,8 @@
 
             <!-- Div for Sign-Up and LogIn buttons -->
             <div id = "SULI">
-                <a href = "signup.html.erb"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
-                <a href = "login.html.erb"><span class="glyphicon glyphicon-log-in"></span> Log In</a>
+                <%= link_to "Sign Up", signup_path, class: "button-butt" %>
+                <%= link_to "Log In", signup_path, class: "button-butt" %>
             </div>
 
         </div>

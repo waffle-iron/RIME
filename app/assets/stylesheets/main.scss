@@ -11,7 +11,7 @@
    text-align: center;
    margin-top: 10vh;
 
-   a {
+   .button-butt {
         padding: 15px;
         background-color: #0066cc;
         color: white;
@@ -19,7 +19,7 @@
         margin: 10px;
         margin-top: 60px !important;
 
-        :hover {
+        &:hover {
                text-decoration: none;
                color: black;
                background-color: #004d99;
@@ -36,6 +36,10 @@ h2 {
    margin-bottom: 15px;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .navbar {
    border-width: 0 !important;
    margin-bottom: 0 !important;
@@ -43,19 +47,24 @@ h2 {
    background-color: #0066cc !important;
 }
 
-.nav.navbar-nav.navbar-right > li > a {
-   color: white !important;
+.nav.navbar-nav.navbar-right {
+    padding-top: 15px;
 
-   :hover {
-       color: black !important;
-   }
+    a {
+      color: white !important;
+      padding: 10px;
+
+      &:hover {
+          color: black !important;
+      }
+  }
 }
 
-.navbar-brand {
+.navbar-brand{
    color: white !important;
    font-size: 1.5em !important;
 
-   :hover {
+   a:hover {
        color: black !important;
    }
 }
