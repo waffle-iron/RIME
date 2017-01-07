@@ -1,0 +1,21 @@
+<% if @user.errors.any? %>
+
+  <div id="error_explanation">
+
+    <div class="alert alert-danger">
+
+      There <%= pluralize(@user.errors.count, "is") %> <%= pluralize(@user.errors.count, "error") %> in your submission.
+
+      <ul>
+
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+
+      </ul>
+
+    </div>
+    
+  </div>
+
+<% end %>
