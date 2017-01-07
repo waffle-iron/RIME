@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   get '/signup', to: 'users#new'
   get 'welcome/welcome'
+
+  resources :users
 end

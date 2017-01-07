@@ -1,6 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/**
+ * SASS mixin(s)
+ */
+@mixin box_sizing {
+   -moz-box-sizing:    border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing:         border-box;
+}
+
 #BannerDiv {
    height: 40vh;
    background-color: #0099ff;
@@ -12,19 +21,24 @@
    margin-top: 10vh;
 
    .button-butt {
-        padding: 15px;
-        background-color: #0066cc;
-        color: white;
-        border-radius: 5px;
-        margin: 10px;
-        margin-top: 60px !important;
-
-        &:hover {
-               text-decoration: none;
-               color: black;
-               background-color: #004d99;
-        }
+       margin: 15px;
    }
+}
+
+.button-butt {
+     padding: 15px;
+     background-color: #0066cc;
+     color: white;
+     border-radius: 5px;
+     width: 100%;
+     margin-top: 30px !important;
+     margin-bottom: 30px !important;
+
+     &:hover {
+            text-decoration: none;
+            color: black;
+            background-color: #004d99;
+     }
 }
 
 h1 {
@@ -83,4 +97,20 @@ ul {
 
 #Plan {
    padding-top: 30px;
+}
+
+/**
+ * For Forms
+ */
+input, textarea, select, .uneditable-input {
+    border: 1px solid #004d99;
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 10px;
+
+    @include box_sizing;
+}
+
+input {
+    height: auto !important;
 }
