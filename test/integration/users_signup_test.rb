@@ -15,4 +15,17 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
 
         assert_template "users/new" #make sure the form reloads.
     end
+
+    test "Valid Signup Form" do
+        get signup_path
+
+        assert_difference 'User.count', 1 do
+            post users_path, params: {user: {name: "test",
+                                             email: "test@test.com",
+                                             password: "password",
+                                             password_confirmation:"password"}}
+        end
+
+        assert_template "users/signup_success"
+    end
 end
