@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RIME</title>
+        <%= csrf_meta_tags %>
+
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+        <%= render 'layouts/navbar' %>
+
+        <div id = "BannerDiv" class = "jumbotron">
+            <h1>Log In to RIME</h1>
+        </div>
+
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-6 col-md-offset-3">
+                    <%= form_for(:session, url: login_path) do |form| %>
+
+                        <%= form.label :email %>
+                        <%= form.email_field :email, class: "form-control" %>
+
+                        <%= form.label :password %>
+                        <%= form.password_field :password, class: "form-control" %>
+
+                        <%= form.submit "Log In", class: "button-butt" %>
+                    <% end %>
+
+                    <p>
+                        New user? <%= link_to "Sign Up Now!", signup_path %>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

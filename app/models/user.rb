@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    before_save { self.email = email.downcase }
 
     #Make sure the User has a username and email, and that they adhere to certain
     #criteria.
