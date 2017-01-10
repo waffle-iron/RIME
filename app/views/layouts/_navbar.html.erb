@@ -15,7 +15,7 @@
                 <!-- Replace this link to a link to the chats homepage when that
                     is working -->
                 <%= link_to "Chats", "#", class: "link" %>
-                <%= link_to "Log Out", logout_path, class: "link"%>
+                <%= link_to "Log Out", logout_path, method: "delete", class: "link"%>
             <% else %>
                 <%= link_to "Sign Up", signup_path, class: "link"%>
                 <%= link_to "Log In", login_path, class: "link" %>
