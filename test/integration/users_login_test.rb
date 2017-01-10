@@ -20,6 +20,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
         delete logout_path  #sends DELETE HTTP request to the logout_path
         assert_not is_logged_in?
         assert_redirected_to root_url
+        delete logout_path  #simulates logging out in a second window.
         follow_redirect!
         assert_template 'welcome/welcome'
 

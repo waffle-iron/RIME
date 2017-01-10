@@ -9,7 +9,7 @@ class UserTest < ActiveSupport::TestCase
 
         @userEmptyEmail = User.new(name: "Empty Email", email: "  ",
                     password: "foobarbaz", password_confirmation: "foobarbaz")
-                    
+
         @userEmptyName = User.new(name: "", email: "empty.email@gmail.com",
                     password: "foobarbaz", password_confirmation: "foobarbaz")
 
@@ -77,5 +77,9 @@ class UserTest < ActiveSupport::TestCase
     test "password length test" do
         @userPasswordTest.password = @userPasswordTest.password_confirmation = "a" * 5;
         assert_not @userPasswordTest.valid?
+    end
+
+    test "User with Nil remember digest" do
+        assert_not @userValid.authenticated?("")
     end
 end
