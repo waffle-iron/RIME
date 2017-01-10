@@ -11,8 +11,15 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-            <%= link_to "Sign Up", signup_path, class: "link"%>
-            <%= link_to "Log In", signup_path, class: "link"%>
+            <% if logged_in? %>
+                <!-- Replace this link to a link to the chats homepage when that
+                    is working -->
+                <%= link_to "Chats", "#", class: "link" %>
+                <%= link_to "Log Out", logout_path, class: "link"%>
+            <% else %>
+                <%= link_to "Sign Up", signup_path, class: "link"%>
+                <%= link_to "Log In", login_path, class: "link" %>
+            <% end %>
         </ul>
     </div>
   </div>

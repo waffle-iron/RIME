@@ -16,12 +16,13 @@
 
             <h1>Welcome to RIME!</h1>
 
-            <!-- Div for Sign-Up and LogIn buttons -->
-            <div id = "SULI">
-                <%= link_to "Sign Up", signup_path, class: "button-butt" %>
-                <%= link_to "Log In", signup_path, class: "button-butt" %>
-            </div>
-
+            <% if !logged_in? %>
+                <!-- Div for Sign-Up and LogIn buttons -->
+                <div id = "SULI">
+                    <%= link_to "Sign Up", signup_path, class: "button-butt" %>
+                    <%= link_to "Log In", login_path, class: "button-butt" %>
+                </div>
+            <% end %>
         </div>
 
         <div class = "container">

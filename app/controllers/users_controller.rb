@@ -8,7 +8,8 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
 
         if @user.save
-            render 'signup_success'
+            log_in @user
+            render 'signup_success' #Will redirect to chat homepage once chat is up and running
         else
             render 'new' #Reset the signup page
         end

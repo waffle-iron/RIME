@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
       if user && user.authenticate(params[:session][:password])
           log_in user
-          redirect_to welcome   #Once chat stuff is up and running, this will redirect to the chat home.          
+          redirect_to root_path   #Once chat stuff is up and running, this will redirect to the chat home.          
       else
           flash.now[:danger] = "Invalid email and/or password." #adds a flash message to be displayed on the next page
           render 'new'  #shows the login page.
