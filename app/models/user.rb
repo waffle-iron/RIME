@@ -1,7 +1,8 @@
 class User < ApplicationRecord
-    attr_accessor :remember_token
+    attr_accessor :remember_token, :activation_token
 
-    before_save { self.email = email.downcase }
+    before_create :create_activation_digest
+    before_save :convert_email_to_lowercase
 
     #Make sure the User has a username and email, and that they adhere to certain
     #criteria.
@@ -45,4 +46,15 @@ class User < ApplicationRecord
     def forget
         update_attribute(:remember_digest, nil)
     end
+
+    private
+        #For email activation
+        def create_activation_digest
+            self.activation_token = User.new_token
+            self.activation_digest = User.digest(activation_token)
+        end
+
+        def convert_email_to_lowercase
+            self.email = email.downcase
+        end
 end

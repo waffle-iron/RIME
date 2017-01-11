@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   get 'welcome/welcome'
 
   resources :users
-  resources: :account_activations, only: [:edit]    #Only providing an Edit route for this resource. 
+  resources :account_activations, only: [:edit]    #Only providing an Edit route for this resource. 
 end
