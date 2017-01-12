@@ -1,6 +1,0 @@
-#Handles config for the Amazon Web Services DynamoDB
-#TODO Keep this, and other config files, OUT of VCS.
-aws_dynamo:
-    access_key_id: "key_id"
-    secret_access_key: "secret_key_id"
-    region: "eu_west_1"
