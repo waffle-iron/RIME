@@ -9,9 +9,16 @@ class SessionsController < ApplicationController
       user = User.find_by(email: params[:session][:email].downcase) #email is stored in lowercase in the db
 
       if user && user.authenticate(params[:session][:password])
-          log_in user
-          remember user
-          redirect_to root_url   #Once chat stuff is up and running, this will redirect to the chat home.
+          if user.activated?
+              log_in user
+              remember user
+              redirect_to root_url   #Once chat stuff is up and running, this will redirect to the chat home.
+          else
+              message = "Account Not Activated "
+              message += "Please check your email for the activation link."
+              flash[:warning] = message
+              redirect_to root_url
+          end
       else
           flash.now[:danger] = "Invalid email and/or password." #adds a flash message to be displayed on the next page
           render 'new'  #shows the login page.
