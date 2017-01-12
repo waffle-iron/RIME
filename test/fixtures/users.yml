@@ -4,3 +4,5 @@ duder:
     name: duder001
     email: duder001@duder001.com
     password_digest: <%= User.digest("password") %>
+    activated: true
+    activated_at: <%= Time.zone.now %>

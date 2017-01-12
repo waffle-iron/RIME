@@ -80,6 +80,6 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "User with Nil remember digest" do
-        assert_not @userValid.authenticated?("")
+        assert_not @userValid.authenticated?(:remember, "")
     end
 end
