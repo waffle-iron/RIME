@@ -8,3 +8,6 @@ notifications:
 branches:
     only:
         - master
+
+before_script:
+  - /bin/rails db:migrate RAILS_ENV=test
