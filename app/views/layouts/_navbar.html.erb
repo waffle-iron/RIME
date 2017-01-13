@@ -1,0 +1,30 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <%= link_to "RIME", root_path, class: "navbar-brand" %>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+            <% if logged_in? %>
+                <!-- Replace this link to a link to the chats homepage when that
+                    is working -->
+                <%= link_to "Chats", "#", class: "link" %>
+                <%= link_to "Log Out", logout_path, method: "delete", class: "link"%>
+            <% else %>
+                <%= link_to "Sign Up", signup_path, class: "link"%>
+                <%= link_to "Log In", login_path, class: "link" %>
+            <% end %>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+<% flash.each do |message_type, message| %>
+    <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+<% end %>
