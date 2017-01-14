@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'channels/new'
+
+  get 'channels/index'
+
+  get 'channels/create'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
