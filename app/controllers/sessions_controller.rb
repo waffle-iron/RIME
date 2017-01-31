@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
           if user.activated?
               log_in user
               remember user
-              redirect_to root_url   #Once chat stuff is up and running, this will redirect to the chat home.
+              redirect_to channels_path
           else
               message = "Account Not Activated "
               message += "Please check your email for the activation link."

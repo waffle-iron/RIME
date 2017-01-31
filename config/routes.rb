@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'channels/new'
+  get 'chat_rooms/new'
 
-  get 'channels/index'
+  get 'chat_rooms/index'
 
-  get 'channels/create'
+  get 'chat_rooms/create'
 
   get 'password_resets/new'
 

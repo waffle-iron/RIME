@@ -12,13 +12,15 @@
         <%= render 'layouts/navbar' %>
 
         <div class = "container">
-          <h1>Channels</h1>
 
-          <%= link_to "New Channel", new_channel_path, class: "button-butt" %>
+          <div id = "ChatsList">
+            <h1>Chats</h1>
 
-          <ul>
-            <%= render @channels %>
-          </ul>
+            <ul>
+              <%= render @chats %>
+              <li><%= link_to "New", new_chat_room_path %></li>
+            </ul>
+          </div>
         </div>
 
       </body>

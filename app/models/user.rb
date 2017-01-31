@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     attr_accessor :remember_token, :activation_token, :reset_token
 
-    has_many :channels, dependent: :destroy #if this user is deleted, delete his chats as well.
+    has_many :chat_rooms, dependent: :destroy #if this user is deleted, delete his chats as well.
 
     before_create :create_activation_digest
     before_save :convert_email_to_lowercase

@@ -134,3 +134,25 @@ input {
         color: $state-danger-text;
     }
 }
+
+/**
+ *  Stuff for the chat window
+ */
+#ChannelsList {
+  width: 33vw;
+
+  h1 {
+    height: 10vh;
+    background-color: #0099ff;
+  }
+
+  ul li {
+    height: 10vh;
+    background-color: white;
+
+    &:hover {
+      background-color: #0099ff;
+      color: black;
+    }
+  }
+}
