@@ -150,6 +150,11 @@ input {
     height: 10vh;
     background-color: white;
 
+    .selected-chat {
+      background-color: #0099ff;
+      color: black;
+    }
+
     &:hover {
       background-color: #0099ff;
       color: black;

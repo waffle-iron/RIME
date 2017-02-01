@@ -1,18 +1,14 @@
 require 'test_helper'
 
-class ChannelsControllerTest < ActionDispatch::IntegrationTest
+class ChatRoomsControllerTest < ActionDispatch::IntegrationTest
+
   test "should get new" do
-    get channels_new_url
+    get new_chat_room_url
     assert_response :success
   end
 
   test "should get index" do
-    get channels_index_url
-    assert_response :success
-  end
-
-  test "should get create" do
-    get channels_create_url
+    get chat_rooms_url
     assert_response :success
   end
 

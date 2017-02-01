@@ -1,3 +1,7 @@
 <li>
-  <%= button_to "#{chat_room.name}", :action => "showChat" %>
+  <% if chat_room.id == @chosen.id %>
+    <%= link_to "#{chat_room.name}", chat_room_path(chat_room), class: "selected-chat" %>
+  <% else %>
+    <%= link_to "#{chat_room.name}", chat_room_path(chat_room), class: "not-selected" %>
+  <% end %>
 </li>

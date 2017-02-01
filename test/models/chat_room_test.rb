@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ChannelTest < ActiveSupport::TestCase
+class ChatRoomTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

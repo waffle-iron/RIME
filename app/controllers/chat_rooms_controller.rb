@@ -4,7 +4,8 @@ class ChatRoomsController < ApplicationController
   end
 
   def index
-    @chat = ChatRoom.all
+    @chats = ChatRoom.all
+    @chosen = ChatRoom.first
   end
 
   def create
@@ -19,8 +20,9 @@ class ChatRoomsController < ApplicationController
     end
   end
 
-  def showChat
-    @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
+  def show
+    @chats = ChatRoom.all
+    @chosen = ChatRoom.includes(:messages).find_by(id: params[:id])
   end
 
   private
