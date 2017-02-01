@@ -14,19 +14,26 @@
         <div class = "container">
 
           <div id = "ChatsList">
+
             <h1>Chats</h1>
 
             <ul>
-              <%= render @chats %>
+              <% if @chats.empty? == false %>
+                <%= render @chats %>
+              <% end %>
+
               <li><%= link_to "New", new_chat_room_path %></li>
             </ul>
+
           </div>
 
           <!-- Displays the messages themselves, using a partial. -->
           <div id = "MessagesSection">
 
-            <%= render @chosen.messages %>
-            
+            <% if @chats.empty? == false %>
+              <%= render @chosen.messages %>
+            <% end %>
+
           </div>
 
         </div>

@@ -6,3 +6,10 @@ duder:
     password_digest: <%= User.digest("password") %>
     activated: true
     activated_at: <%= Time.zone.now %>
+
+duder2:
+    name: duder002
+    email: duder002@duder002.com
+    password_digest: <%= User.digest("possword") %>
+    activated: true
+    activated_at: <%= Time.zone.now %>

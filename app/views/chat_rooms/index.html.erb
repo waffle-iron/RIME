@@ -19,7 +19,10 @@
             <h1>Chats</h1>
 
             <ul>
-              <%= render @chats %>
+              <% if @chats != nil %>
+                <%= render @chats %>
+              <% end %>
+
               <li><%= link_to "New", new_chat_room_path %></li>
             </ul>
 
@@ -28,8 +31,10 @@
           <!-- Displays the messages themselves, using a partial. -->
           <div id = "MessagesSection">
 
-            <%= render @chosen.messages %>
-            
+            <% if @chats != nil %>
+              <%= render @chosen.messages %>
+            <% end %>
+
           </div>
 
         </div>
