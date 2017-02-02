@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/cow-co/RIME.png?label=ready&title=Ready)](https://waffle.io/cow-co/RIME)
 # RIME
 [![Build Status](https://travis-ci.org/cow-co/RIME.svg?branch=master)](https://travis-ci.org/cow-co/RIME)
 [![Coverage Status](https://coveralls.io/repos/github/cow-co/RIME/badge.svg?branch=master)](https://coveralls.io/github/cow-co/RIME?branch=master)
